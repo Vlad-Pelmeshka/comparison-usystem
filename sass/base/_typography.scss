@@ -1,0 +1,175 @@
+// --------------------------------text size------------------------------
+
+.text-size010 {
+  font-size: 10px !important;
+  line-height: 12px !important;
+}
+
+.text-size012 {
+  font-size: 12px !important;
+  line-height: 20px !important;
+}
+
+.text-size014 {
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+
+.text-size016 {
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+
+.text-size017 {
+  font-size: 17px !important;
+  line-height: 48px !important;
+}
+
+.text-size018 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+.text-size020 {
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+}
+
+.text-size022 {
+  font-size: 22px !important;
+  line-height: 28px !important;
+}
+
+.text-size023 {
+  font-size: 23px !important;
+  line-height: 31px !important;
+}
+
+.text-size024 {
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+
+.text-size026 {
+  font-size: 26px !important;
+  line-height: 32px !important;
+}
+
+.text-size032 {
+  font-size: 32px !important;
+  line-height: 44px !important;
+}
+
+.text-size036 {
+  font-size: 36px !important;
+  line-height: 42px !important;
+}
+
+.text-size040 {
+  font-size: 40px !important;
+  line-height: 35px !important;
+}
+
+.text-size048 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+  @media screen and (max-width: 1024px) {
+    font-size: 32px !important;
+    line-height: 46px !important;
+  }
+}
+
+.text-size060 {
+  font-size: 60px !important;
+  line-height: 64px !important;
+  @media screen and (max-width: 768px) {
+    font-size: 32px !important;
+    line-height: 46px !important;
+  }
+}
+
+.text-size078 {
+  font-size: 78px !important;
+  line-height: 80px !important;
+  @media screen and (max-width: 768px) {
+    font-size: 48px !important;
+    line-height: 56px !important;
+  }
+}
+
+.text-size0128 {
+  font-size: 128px!important;
+  line-height: 140px!important;
+  @media screen and (max-width: 768px) {
+    font-size: 70px !important;
+    line-height: 96px !important;
+  }
+}
+
+// ---------------------------------text color---------------------------------
+
+.text-red {
+  color: #D11010 !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.text-grey {
+  color: #737373 !important;
+}
+
+.text-grey02 {
+  color: #979797 !important;
+}
+
+.text-grey03 {
+  color: #525C7A !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+
+// ---------------------------------text weight---------------------------------
+
+.fw-regular {
+  font-weight: 400 !important;
+}
+
+.fw-medium {
+  font-weight: 500 !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+// ---------------------------------font family---------------------------------
+
+.popins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.manrope {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.calibri {
+  font-family: 'Calibri', sans-serif !important;
+  font-style: italic !important;
+}

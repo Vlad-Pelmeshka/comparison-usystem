@@ -1,0 +1,42 @@
+.btn {
+  font-weight: 600;
+  font-family: 'Exo', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 8px 18px;
+  box-shadow: 0 4px 4px rgba(209, 16, 16, 0.25);
+  border-radius: 8px;
+  display: block;
+  width: fit-content;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: unset;
+  cursor: pointer;
+  text-decoration: unset;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+
+  &-red {
+    background-color: #D11010;
+    color: #FFFFFF;
+
+    &:hover {
+      text-decoration: unset;
+      background-color: #FF4444;
+      box-shadow: 0 4px 4px rgba(209, 16, 16, 0.4);
+      color: #FFFFFF;
+    }
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #000000;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: unset;
+    }
+  }
+}

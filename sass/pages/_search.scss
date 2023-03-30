@@ -1,0 +1,119 @@
+.search_section {
+  .main_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+
+    .main_block-text_group {
+      text-align: center;
+
+      .main_block-text {
+        Font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #737373;
+      }
+    }
+  }
+
+  .search-block {
+    padding-bottom: 48px;
+
+    form {
+      gap: 16px;
+      @media screen and (max-width: 768px) {
+        flex-flow: column;
+      }
+
+      input {
+        border: unset;
+        max-width: 413px;
+        width: 100%;
+        height: 40px;
+        background: #FFFFFF;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+        padding: 10px 40px 10px 16px;
+        color: #000;
+
+        &::placeholder {
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #A3A3A3;
+        }
+      }
+
+      .btn {
+        @media screen and (max-width: 768px) {
+          max-width: 413px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .found-block {
+    padding: 92px 0;
+
+    h2 {
+      margin-bottom: 8px;
+    }
+  }
+
+  .search-list {
+    justify-content: flex-start;
+    margin: 0 -12px;
+
+    .block {
+      width: calc(1 / 3 * 100% - 24px);
+      margin: 48px 12px;
+      background: #F8F9FC;
+      border-radius: 20px;
+      height: 349px;
+      padding: 0 40px;
+      @media screen and (max-width: 992px) {
+        width: calc(1 / 2 * 100% - 24px);
+      }
+      @media screen and (max-width: 768px) {
+        width: calc(100% - 24px);
+        margin: 24px 12px;
+      }
+
+      .breadcrumbs {
+        text-align: start;
+        padding-bottom: 8px;
+        width: 100%;
+      }
+
+      .title {
+        margin-bottom: 48px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: start;
+        width: 100%;
+      }
+
+      .btn {
+        width: 80%;
+        text-align: center;
+
+        a {
+          color: #fff;
+          text-decoration: unset;
+
+          &:hover {
+            text-decoration: unset;
+          }
+        }
+      }
+    }
+  }
+}

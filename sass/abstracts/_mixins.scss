@@ -1,0 +1,223 @@
+@mixin font-face($name, $file) {
+	@font-face {
+		font-family: '#{$name}';
+
+		src: url('../../assets/fonts/#{$file}.eot');
+		src: url('../../assets/fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+			url('../../assets/fonts/#{$file}.woff') format('woff'),
+			url('../../assets/fonts/#{$file}.ttf') format('truetype'),
+			url('../../assets/fonts/#{$file}.svg?#webfont') format('svg');
+	}
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin retina-image($image, $width, $height) {
+	@media (min--moz-device-pixel-ratio: 1.3),
+		(-o-min-device-pixel-ratio: 2.6/2),
+		(-webkit-min-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 1.3),
+		(min-resolution: 1.3dppx) {
+		background-image: url($image);
+		background-size: $width $height;
+	}
+}
+
+@mixin abs-position($top, $right, $bottom, $left) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin breakpoint($point) {
+	@if $point == xxl {
+		@media only screen and (min-width: 75em) {
+			@content;
+		}
+	} @else if $point == xl {
+		@media only screen and (max-width: 75em) {
+			@content;
+		}
+	} @else if $point == lg {
+		@media only screen and (max-width: 62em) {
+			@content;
+		}
+	} @else if $point == md {
+		@media only screen and (max-width: 48em) {
+			@content;
+		}
+	} @else if $point == sm {
+		@media only screen and (max-width: 36em) {
+			@content;
+		}
+	}
+}
+
+@mixin text-shorten {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin font-size($size: 16, $base: 16) {
+	// font-size: $size + px;
+	font-size: calc($size / $base) * 1rem;
+}
+
+@mixin line-height($height: 16, $base: 16) {
+	// line-height: $height + px;
+	line-height: calc($height / $base) * 1rem;
+}
+
+@mixin cover-background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin hover {
+	@media (hover: none) {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		&:active {
+			@content;
+		}
+	}
+
+	@media (-ms-high-contrast: none),
+		(-ms-high-contrast: active),
+		(-moz-touch-enabled: 0),
+		(hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+@mixin mt($value, $base: 16) {
+	&:not(:last-child) {
+		margin-top: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin mr($value, $base: 16) {
+	&:not(:last-child) {
+		// margin-right: $value + px;
+		margin-right: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin mb($value, $base: 16) {
+	&:not(:last-child) {
+		margin-bottom: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin ml($value, $base: 16) {
+	&:not(:last-child) {
+		margin-left: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin pt($value, $base: 16) {
+	&:not(:last-child) {
+		padding-top: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin pr($value, $base: 16) {
+	&:not(:last-child) {
+		// margin-right: $value + px;
+		padding-right: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin pb($value, $base: 16) {
+	&:not(:last-child) {
+		padding-bottom: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin pl($value, $base: 16) {
+	&:not(:last-child) {
+		padding-left: calc($value / $base) * 1rem;
+	}
+}
+
+@mixin pseudo() {
+	content: '';
+	display: block;
+}
+
+@mixin input-placeholder {
+	&.placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+@mixin vertical-center {
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin gradient($direction, $list) {
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}
+
+@mixin hoverUnderline($color, $thickness) {
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: $thickness;
+		bottom: -1px;
+		left: 0;
+		transform: scaleX(0);
+		transform-origin: left center;
+		opacity: 0;
+		background: $color;
+		transition: 0.3s;
+	}
+	&.show,
+	&:hover {
+		&::before {
+			transform: scaleX(1);
+			opacity: 1;
+		}
+	}
+}

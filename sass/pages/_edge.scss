@@ -1,0 +1,136 @@
+.banner_section {
+  &.edge-banner {
+    margin-top: 0;
+  }
+}
+
+.edge-why {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90.23deg, #D11010, #fff) 1;
+  @media screen and (max-width: 1200px) {
+    padding-top: 100px;
+  }
+
+  .left-right-block {
+    flex-wrap: unset !important;
+  }
+
+  .main_block {
+    max-width: unset !important;
+  }
+
+  .main_block-text_group {
+    max-width: 555px;
+    min-width: 555px;
+    margin-left: 73px;
+    @media screen and (max-width: 1200px) {
+      max-width: 100%;
+      margin-left: 0;
+      padding-bottom: 40px;
+    }
+
+    .main_block-title {
+      padding-bottom: 32px;
+
+      h2 {
+        strong {
+          color: #D11010;
+        }
+      }
+    }
+
+    .main_block-text {
+      p {
+        margin: 0 !important;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+  }
+
+  .img_block {
+    border-bottom: unset !important;
+    border-image: unset !important;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.text-img-custom {
+  padding: 146px 0 102px;
+
+  .wrapper-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 70px;
+    padding-right: 109px;
+    @media screen and (max-width: 1200px) {
+      padding: 0 32px;
+    }
+  }
+
+  .left-right-block {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .main_block {
+    max-width: 555px !important;
+    @media screen and (max-width: 1200px) {
+      max-width: 100% !important;
+    }
+  }
+
+  .main_block-text {
+    p {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px !important;
+      line-height: 24px !important;
+      margin: 0 !important;
+    }
+  }
+
+  .img_block {
+    border-bottom: unset !important;
+    border-image: unset !important;
+  }
+}
+
+.flex_element_section {
+  &.edge-flex-elements {
+    padding: 96px 0 0;
+    background-color: unset;
+
+    .wrapper-flex-elements {
+      width: 100%;
+      max-width: 1232px;
+      margin: 0 auto;
+      @media screen and (max-width: 1300px) {
+        padding: 0 32px;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0 15px;
+      }
+    }
+
+    .flex_element_section-list {
+      justify-content: space-around !important;
+      @media screen and (max-width: 1200px) {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex_element_section {
+        width: 23.4%;
+        padding: 0;
+        background-color: unset;
+        @media screen and (max-width: 1200px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.marker {
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 18px;
+
+  &-red {
+    background-color: #D11010;
+  }
+}

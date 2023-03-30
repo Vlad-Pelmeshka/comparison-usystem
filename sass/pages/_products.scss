@@ -1,0 +1,23 @@
+.title-section {
+  &.products {
+
+    .main_block-text {
+      p {
+        max-width: 579px;
+      }
+    }
+  }
+}
+
+.footer-products {
+  border-top: unset !important;
+  border-image: unset !important;
+
+  .footer__list {
+    padding-top: 130px;
+  }
+}
+
+.product-main-subscribe {
+  padding-top: 244px;
+}
