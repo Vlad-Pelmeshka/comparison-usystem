@@ -89,6 +89,7 @@ foreach ($query_other->posts as $key => $post_other) {
 
 <?php
 
+get_template_part('components/subscribe-section');
 get_footer();
 
 ?>

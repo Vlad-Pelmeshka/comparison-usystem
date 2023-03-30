@@ -1,17 +1,3 @@
-let url = window.location.href;
-
-if (url.indexOf("/products/") != -1) {
-    document.querySelector(".footer-top").style.display = "none";
-    document.querySelector(".footer-bottom").classList.add('footer-products');
-}
-
-if (url.indexOf("/terms-conditions/") != -1) {
-    document.querySelector(".footer-top").style.display = "none";
-    const body = document.getElementsByTagName("body")[0];
-    body.classList.add('background-terms');
-    document.querySelector('.footer__copyright').style.backgroundColor = "white";
-}
-
 const section = document.querySelector('.default_page_content');
 const navBlock = document.querySelector('.naw-list_block');
 

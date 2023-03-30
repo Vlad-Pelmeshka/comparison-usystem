@@ -6,6 +6,7 @@
             'class_list'        => get_sub_field('class_list') ?? '',
             'image_position'    => get_sub_field('image_position'),
             'image'             => get_sub_field('image'),
+            'text_after_image'  => get_sub_field('text_after_image'),
             'product_category'  => get_sub_field('product_category') ?? '',
             'select_block_type' => get_sub_field('select_block_type') ?? '', // замість classList будемо оце юзати. Якщо треба новий тип додати - пиши мені
         );
@@ -51,6 +52,12 @@
 
                 <div class="img_block <?= ($text_image_data['image_position'] == 'left') ? '' : 'uk-hidden@s' ?>">
                     <img src="<?= $text_image_data['image'] ?>" alt="<?= $main_block['title'] ?>">
+
+                    <?php if(isset($text_image_data['text_after_image']) && $text_image_data['text_after_image']): ?>
+                        <div class="text-image_section-text_after_image">
+                            <?= $text_image_data['text_after_image'] ?>
+                        </div>   
+                    <? endif; ?>
                 </div>
 
                 <div class="left-right-text_block">
@@ -64,6 +71,11 @@
                     ?>
                     <div class="img_block uk-visible@s">
                         <img src="<?= $text_image_data['image'] ?>" alt="<?= $main_block['title'] ?>">
+                        <?php if(isset($text_image_data['text_after_image']) && $text_image_data['text_after_image']): ?>
+                            <div class="text-image_section-text_after_image">
+                                <?= $text_image_data['text_after_image'] ?>
+                            </div>   
+                        <? endif; ?>
                     </div>
                 <?php
                 endif;

@@ -1,3 +1,4 @@
+
 <?php
 
 	$banner_data = array(
@@ -19,4 +20,3 @@
         <!-- Виводимо текст -->
 
 <?php endif; ?>
-</section>

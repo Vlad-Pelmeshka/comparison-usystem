@@ -67,7 +67,7 @@ if (have_rows('page_content')):
               get_template_part('components/banner-section');
               break;
 
-          case 'slider_section':
+          case 'news_slider_section':
               get_template_part('components/slider-news-section');
               break;
               
@@ -101,6 +101,14 @@ if (have_rows('page_content')):
               
           case 'case_studies_section':
               get_template_part('components/case_studies-section');
+              break;
+              
+          case 'image_section':
+              get_template_part('components/image-section');
+              break;
+              
+          case 'product_list_section':
+              get_template_part('components/product_list-section');
               break;
 
       endswitch;
